@@ -16,7 +16,11 @@ class CardComboTrainer
 	end
 
 	def help
-		puts "Trying to help you here"
+		puts "This is the Card Combination Trainer"
+		puts "Developed by C.J. Jameson, 2014"
+		puts ""
+		puts "Available command-line arguments:"
+		puts "--help, -h  display this help file"
 	end
 end
 
