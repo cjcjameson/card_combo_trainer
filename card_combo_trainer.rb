@@ -3,19 +3,21 @@ class CardComboTrainer
 	def initialize(argv = [])
 		@welcomed = false
 		if argv.include?("--help") || argv.include?("-h")
-			help;	return
+			View.help;	return
 		end
-		welcome
-	end
+		@welcomed = View.welcome
+	end	
+end
 
-	def welcome
+class View
+	def self.welcome
 		puts "Welcome to the Card Combination Trainer!"
 		puts "Practice your bridge declarer skills by focusing on"
 		puts "the critical card combinations you want to practice"
-		@welcomed = true
+		true
 	end
 
-	def help
+	def self.help
 		puts "This is the Card Combination Trainer"
 		puts "Developed by C.J. Jameson, 2014"
 		puts ""
