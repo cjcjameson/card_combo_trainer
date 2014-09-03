@@ -3,14 +3,12 @@ DECLARER = :south
 DUMMY = :north
 
 class CardComboTrainer
-	attr_reader :welcomed
 	def initialize(argv = [])
-		@welcomed = false
 		if argv.include?("--help") || argv.include?("-h")
 			View.help; return
 		end
-		@welcomed = View.welcome
-		loop do
+		@close_session = false
+		until @close_session do
 			hand = Hand.new
 			View.display_card_combo(hand)
 		end
@@ -18,7 +16,7 @@ class CardComboTrainer
 end
 
 class Hand #Model of a hand
-	attr_reader :north, :south
+	attr_accessor :north, :south
 	def initialize
 		puts "please enter the cards in north's hand"
 		@north = gets.chomp
@@ -35,7 +33,7 @@ class Hand #Model of a hand
 	end
 end
 
-class View
+module View
 	def self.welcome
 		puts "Welcome to the Card Combination Trainer!"
 		puts "Practice your bridge declarer skills by focusing on"
