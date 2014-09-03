@@ -24,11 +24,11 @@ Future development may include: (backlog)
 + Keeping track of user performance over time (leaderboard, stats)
 + Pulling data from an online source of information on bridge (GIB integration?)
 
-Release 1 will not go beyond one hand...not trying to build a full bridge AI here! Keep it simple and show the logic to the player.
+Release 1 will not go beyond one suit...not trying to build a full bridge AI here! Keep it simple and show the logic to the player.
 
 ####Command Line options
 --help or -h: display help file
 
 ###Inspiration and Credits
 
-Old versions of [BBO](http://www.bridgebase.com) had a training program on them. It would always set up the opponents' cards as a "gotcha" if you played a suit incorrectly.
+[BBO](http://www.bridgebase.com) has a training program on it called BridgeMaster. It would always set up the opponents' cards as a "gotcha" if you played a suit incorrectly. Even before, there was an analog bridge training machine with sheets you would insert to reveal cards in order.

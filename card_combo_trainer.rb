@@ -25,6 +25,14 @@ class Hand #Model of a hand
 		puts "please enter the cards in south's hand"
 		@south = gets.chomp
 	end
+
+	def parse_cards(user_hand_input)
+		user_hand_input.split!(" ").map!(&:symbolize)
+		#split on spaces
+		#for each, check if it's a key word or a key letter or number 2-10
+		#if it's not, check each character
+		#if it's a colloquial term, like "doubleton", "third", "stiff", "eight to the AK", parse that
+	end
 end
 
 class View
